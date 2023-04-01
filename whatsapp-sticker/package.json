@@ -1,0 +1,17 @@
+{
+  "name": "open-wa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "openwa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node openwa.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^3.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.19.5"
+  }
+}
