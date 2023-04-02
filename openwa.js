@@ -4,6 +4,9 @@ const { Client, LegacySessionAuth, LocalAuth, MessageMedia } = require("whatsapp
 const { getSystemErrorMap } = require("util");
 const { Configuration, OpenAIApi } = require("openai");
 const { url } = require("inspector");
+const puppeteerOptions = {
+  args: ["--no-sandbox"],
+};
 
 const configuration = new Configuration({
   apiKey: "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",
@@ -12,8 +15,7 @@ const openai = new OpenAIApi(configuration);
 const client = new Client({
   authStrategy: new LocalAuth({
     clientId: "client-one", //Un identificador(Sugiero que no lo modifiques)
-    puppeteer:
-    process.env.NODE_ENV === 'production' ? puppeteerOptions : undefined,
+    puppeteer: process.env.NODE_ENV === "production" ? puppeteerOptions : undefined,
   }),
 });
 
